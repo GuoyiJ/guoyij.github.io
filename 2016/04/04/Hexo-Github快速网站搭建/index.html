@@ -83,7 +83,8 @@ Node.js
 安装">
 <meta property="og:image" content="http://projetcompromis.tk/images/git-install-path-options.png">
 <meta property="og:image" content="http://projetcompromis.tk/images/git-install-line-ending-options.png">
-<meta property="og:updated_time" content="2016-04-05T14:59:55.780Z">
+<meta property="og:image" content="http://7xslu0.com2.z0.glb.clouddn.com/get-ssh-url.JPG">
+<meta property="og:updated_time" content="2016-04-09T10:57:13.410Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Github快速网站搭建">
 <meta name="twitter:description" content="软件安装安装前准备
@@ -303,7 +304,7 @@ Node.js
 <p>  先通过 <code>cd ~/. ssh</code> 查看本地ssh keys,删除掉它们（如果需要备份，可先新建一个备份文件夹 <code>mkdir key_backup</code>，然后复制进去 <code>cp id_rsa* key_backup</code>），删除语句为 <code>rm id_rsa*</code> 。删除后生成一个新的ssh key，语句为 <code>ssh-keygen -t rsa -C &quot;your@email.address&quot;</code> ，注意把引号中的邮件地址改为你的，然后连敲三次回车即可。</p>
 </li>
 <li><p>配置新的ssh key</p>
-<p>  进入目录 <em>C:\Users\JGY.ssh</em> ，用记事本打开文件 <strong>id_rsa.pub</strong> ，复制里面的所有内容。此时打开网站<a href="https://github.com/" title="Github.com" target="_blank" rel="external">Github.com</a>，登录 - 点击头像 - Settings - 左侧点击SSH keys - 右上角点击New SSH key，在Key输入框里粘贴刚复制的内容，Title可不填，点击Add SSH key，结束。</p>
+<p>  进入目录 <em>C:\Users\JGY.ssh</em> ，用记事本打开文件 <strong>id_rsa.pub</strong> ，复制里面的所有内容。此时打开网站<a href="https://github.com/" title="Github.com" target="_blank" rel="external">Github.com</a>，如果还没有Github网站的帐号，暂停一下，先注册一个帐号。记住你的Github帐号，接着继续，登录 - 点击头像 - Settings - 左侧点击SSH keys - 右上角点击New SSH key，在Key输入框里粘贴刚复制的内容，Title可不填，点击Add SSH key，结束。</p>
 </li>
 <li><p>Git用户配置</p>
 <p>  在Git Bash里输入以下内容：</p>
@@ -336,12 +337,28 @@ Node.js
 <p> 在目录 <em>D:\Hexo</em> 中，右键打开Git Bash，输入 <code>hexo new My-first-post</code> ，然后打开目录 <em>D:\Hexo\source_posts</em> ，会发现刚创建的文章的文件，该文件格式为md（Markdown），使用编辑器MarkdownPad打开后随便追加几行字作为第一篇文章的内容。</p>
 </li>
 <li><p>在浏览器里见识你的处女作</p>
-<p> 接着在Git Bash里输入 <code>hexo g</code> ，就把你的文章整合进网站里了，然后输入 <code>hexo server</code> ，启动服务后，打开浏览器，地址栏输入 <strong><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></strong> ，就看到成品啦！</p>
+<p> 接着在Git Bash里输入 <code>hexo g</code> ，就把你的文章整合进网站里了，然后输入 <code>hexo server</code> ，启动服务后，打开浏览器，地址栏输入 <strong><a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></strong> ，就看到成品啦！不过这只是本地服务里的网站，别人看不到的，要让大家都能看到，接着看后面的。</p>
 <p> 是不是挺丑的，<a href="https://hexo.io/themes/" target="_blank" rel="external">官网</a>上有很多好看的模板，先别急，后面教你怎么把它们统统偷来。</p>
 </li>
 </ol>
-<h1 id="发布到Github"><a href="#发布到Github" class="headerlink" title="发布到Github"></a>发布到Github</h1><h2 id="注册一个Github帐号"><a href="#注册一个Github帐号" class="headerlink" title="注册一个Github帐号"></a>注册一个Github帐号</h2><p>自己去<a href="https://github.com/" title="https://github.com/" target="_blank" rel="external">Github官网</a>注册一个帐号。</p>
-<p>使用<!-- more -->表示首页摘要到此为止</p>
+<h1 id="发布到Github"><a href="#发布到Github" class="headerlink" title="发布到Github"></a>发布到Github</h1><h2 id="在Github上建立你的网站门面"><a href="#在Github上建立你的网站门面" class="headerlink" title="在Github上建立你的网站门面"></a>在Github上建立你的网站门面</h2><ol>
+<li><p>登录<a href="https://github.com/" title="Github.com" target="_blank" rel="external">Github.com</a>，点右上角的 <code>+</code> 号，点击 <strong>New repository</strong> ，接下来的页面里，在 <strong>Repository name</strong> 中输入 <code>username.github.io</code> ，注意，<em>username</em> 必须是你Github的用户名，然后点击 <strong>Create repository</strong> 。创建的这个东西将存放你的网站资料，并且可以转为你在浏览器中可以看到的网站成品。</p>
+</li>
+<li><p>打开刚创建的repository主页面，复制SSH方式下的URL，见下图：<br><img src="http://7xslu0.com2.z0.glb.clouddn.com/get-ssh-url.JPG" alt=""></p>
+</li>
+</ol>
+<h2 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a>配置Hexo</h2><p>打开前面创建的存网站文件的文件夹，刚刚的例子是 <em>D:\Hexo</em> ，进去后会发现一个文件 <strong>_config.yml</strong> ，用记事本打开它，翻到最下面，有这么一行 <code>deploy:</code> ，按照以下格式改写：</p>
+<pre><code>deploy:
+  type: git
+  repo: git@github.com:GuoyiJ/guoyij.github.io.git
+  branch: master
+</code></pre>
+
+<p>其中，<em>repo</em> 替换为前一个步骤里复制的URL即可，保存关闭。</p>
+<h2 id="开始发布"><a href="#开始发布" class="headerlink" title="开始发布"></a>开始发布</h2><p>在你的网站文件夹内，如 <em>D:\Hexo</em> ，右键打开Git Bash（如果刚启动服务用的窗口还在，可以按住Ctrl+C停止服务），然后接着输入 <code>hexo d</code> ，就可以把本地的内容上传到Github网站了。</p>
+<h2 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h2><p>打开浏览器，输入 <strong><a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a></strong> ，其中 <em>username</em> 为你的Github用户名，就可以看到之前在本地服务里看到的网站了，不同的是，你的朋友们都可以通过这个网址看到你的网站啦。</p>
+<h1 id="换一个个性的域名"><a href="#换一个个性的域名" class="headerlink" title="换一个个性的域名"></a>换一个个性的域名</h1><p>使用<!-- more -->表示首页摘要到此为止</p>
+<p>在网站的配置文件 <em>_config.yml</em> 中，语言的配置 <code>language: zh-CN</code> 里，nexT主题会自动在目录 <em>themes\next\languages</em> 中找到名为 <em>zh-CN.yml</em> 的文件，注意nexT主题里中文语言文件是 <em>zh-Hans.yml</em></p>
 
       
     </div>
@@ -362,7 +379,11 @@ Node.js
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo-Github-网站/" rel="tag">#Hexo,Github,网站</a>
+            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+          
+            <a href="/tags/Github/" rel="tag">#Github</a>
+          
+            <a href="/tags/网站/" rel="tag">#网站</a>
           
         </div>
       
@@ -455,7 +476,7 @@ Node.js
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -486,7 +507,7 @@ Node.js
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#软件安装"><span class="nav-number">1.</span> <span class="nav-text">软件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装前准备"><span class="nav-number">1.1.</span> <span class="nav-text">安装前准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js"><span class="nav-number">1.1.1.</span> <span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git"><span class="nav-number">1.1.2.</span> <span class="nav-text">Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MarkdownPad"><span class="nav-number">1.1.3.</span> <span class="nav-text">MarkdownPad</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生成网站文件"><span class="nav-number">2.</span> <span class="nav-text">生成网站文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#发布到Github"><span class="nav-number">3.</span> <span class="nav-text">发布到Github</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注册一个Github帐号"><span class="nav-number">3.1.</span> <span class="nav-text">注册一个Github帐号</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#软件安装"><span class="nav-number">1.</span> <span class="nav-text">软件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装前准备"><span class="nav-number">1.1.</span> <span class="nav-text">安装前准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js"><span class="nav-number">1.1.1.</span> <span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git"><span class="nav-number">1.1.2.</span> <span class="nav-text">Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MarkdownPad"><span class="nav-number">1.1.3.</span> <span class="nav-text">MarkdownPad</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生成网站文件"><span class="nav-number">2.</span> <span class="nav-text">生成网站文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#发布到Github"><span class="nav-number">3.</span> <span class="nav-text">发布到Github</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在Github上建立你的网站门面"><span class="nav-number">3.1.</span> <span class="nav-text">在Github上建立你的网站门面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Hexo"><span class="nav-number">3.2.</span> <span class="nav-text">配置Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始发布"><span class="nav-number">3.3.</span> <span class="nav-text">开始发布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问"><span class="nav-number">3.4.</span> <span class="nav-text">访问</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#换一个个性的域名"><span class="nav-number">4.</span> <span class="nav-text">换一个个性的域名</span></a></li></ol></div>
             
           </div>
         </section>
